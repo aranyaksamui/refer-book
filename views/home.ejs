@@ -26,10 +26,14 @@
                 <div class="header  grid justify-center items-center grid-cols-[70%,30%] mt-3">
                     <div class="name text-black h-14  w-auto flex items-center pl-5"> referbook.io</div>
                     <div class="identity h-14  w-auto grid grid-cols-2">
-                        <div class="upload flex items-center justify-center bg-[#FFB72B] text-black w-36 ml-5 rounded-2xl transition ease-in-out delay-50  hover:scale-110 hover:bg-[#FFE61B] duration-300 cursor-pointer "
-                        >->UPLOAD</div>
+                        <a class="upload flex items-center justify-center bg-[#FFB72B] text-black w-36 ml-5 rounded-2xl transition ease-in-out delay-50  hover:scale-110 hover:bg-[#FFE61B] duration-300 cursor-pointer "
+                        href="accounts/user/upload">->UPLOAD</a>
                         <div class="user-logo flex items-center justify-center">
-                            User Bruh
+                            <% if (isLoggedIn) { %>
+                                <%= userEmail %> 
+                            <% } else { %>
+                                <p>Please login</p>
+                            <% } %>
                             <!-- TO BE REMOVED -->
                             <a href="/accounts/register">REGISTER</a>
                             <a href="/accounts/login">LOGIN</a>

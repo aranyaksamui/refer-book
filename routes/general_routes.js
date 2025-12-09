@@ -8,6 +8,6 @@ import { isUserAuthenticated } from "../auth/auth.js";
 const router = Router();
 
 router.get("/", getHomePage);
-router.get("/protected", isUserAuthenticated, getProtectedRoute)
+router.get("/protected", isUserAuthenticated, getProtectedRoute);
 
 export default router;
